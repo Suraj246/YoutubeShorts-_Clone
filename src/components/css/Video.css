@@ -1,0 +1,103 @@
+.video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    border-radius: 20px;
+}
+
+.video__player {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+.shortsVideoSideIcons {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    top: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.likeSVG {
+    width: 20px;
+    cursor: pointer;
+}
+
+.like-count {
+    color: aliceblue;
+    margin-top: 0;
+}
+
+.shortsBottom {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 10%;
+    width: 100%;
+}
+
+.shortsBottom span {
+    color: white;
+    font-size: 22px;
+    padding-left: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.overlay .play-button {
+    width: 20px;
+    cursor: pointer;
+}
+
+.overlay .pause-button {
+    width: 20px;
+    cursor: pointer;
+}
+
+.seeker {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+}
+
+.seeker input[type="range"] {
+    width: 100%;
+    height: 3px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    background: rgb(136, 62, 62);
+    border-radius: 5px;
+}
+
+.seeker input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6px;
+    height: 6px;
+    background: red;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .likeSVG {
+        width: 40px;
+    }
+}

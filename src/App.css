@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+html {
+  scroll-snap-type: y mandatory;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: grid;
+  place-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app__videos {
+  position: relative;
+  height: 70vh;
+  max-width: 20vw;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.app__videos::-webkit-scrollbar {
+  display: none;
+}
+
+/* for IE Safari*/
+.app__videos {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media screen and (min-width: 1025px) {
+  .app__videos {
+    height: 80vh;
+    max-width: 20vw;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .app__videos {
+    height: 60vh;
+    max-width: 80vw;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 768px) {
+  .app__videos {
+    height: 50vh;
+    max-width: 95vw;
+  }
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+  .app__videos {
+    height: 70%;
+    max-width: 95vw;
   }
 }
